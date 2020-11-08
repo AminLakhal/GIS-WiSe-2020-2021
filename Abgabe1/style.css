@@ -6,38 +6,45 @@ body {
     margin-left: auto;
     margin-right: auto;
 }
+
 .Navi {
     background-color: white;
     margin-left: 550px;
     position: sticky;
     position: -webkit-sticky;
     margin-top: -10px;
-    top: 50;
     border-bottom-left-radius: 20px;
     cursor: pointer;
     z-index: 99;
     animation: none;
 }
 
-#navigation{z-index: 99;
-animation: none;}
+#navigation {
+    z-index: 99;
+    animation: none;
+}
 
 .Navi a {
     color: black;
     text-decoration: none;
 }
+
 .Navi a:hover {
     color: red;
 }
+
 #aboutmeactive {
     color: red;
 }
+
 #portfolioactive {
     color: red;
 }
+
 #contactactive {
     color: red;
 }
+
 h1 {
     z-index: 0;
     color: white;
@@ -48,14 +55,18 @@ h1 {
     animation-duration: 3s;
     animation-name: fadein;
 }
+
 @keyframes fadein {
-    from {z-index: 0;
+    from {
+        z-index: 0;
         opacity: 0%;
     }
-    to {z-index: 0;
+    to {
+        z-index: 0;
         opacity: 100%;
     }
 }
+
 .boxschrift {
     z-index: 0;
     background-color: black;
@@ -67,14 +78,18 @@ h1 {
     animation-duration: 3s;
     animation-name: down;
 }
+
 @keyframes down {
-    from {z-index: 0;
+    from {
+        z-index: 0;
         margin-top: -300px;
     }
-    to {z-index: 0;
+    to {
+        z-index: 0;
         margin-top: -60px;
     }
 }
+
 #Avatar {
     position: relative;
     top: -325px;
@@ -82,37 +97,47 @@ h1 {
     opacity: 1;
     transform: scale(1);
 }
+
 #Avatar:hover {
     transform: scale(2.5);
     opacity: 1;
 }
+
 #Liste {
     list-style-type: none;
     text-align: center;
 }
+
 #Notfall {
     color: red;
 }
+
 h1 {
     text-decoration: none;
 }
+
 h2 {
     color: grey;
     text-decoration: none;
 }
+
 h3 {
     color: grey;
 }
+
 h4 {
     color: grey;
 }
+
 .Bilder {
     opacity: 1;
     transform: scale(0.75);
 }
+
 div~p {
     color: brown;
 }
+
 tr>th {
     color: rgb(247, 0, 255);
 }
@@ -125,6 +150,7 @@ tr>th {
         opacity: 100%;
     }
 }
+
 .Bilder:hover {
     transform: scale(1);
     opacity: 1;
@@ -132,39 +158,48 @@ tr>th {
     border: 5px solid black;
     padding: 5px;
 }
+
 .mainbox {
     display: flex;
 }
+
 .container {
     display: flex;
     border: 1px solid black;
     padding: 10px;
 }
+
 .box1 {
     color: red;
     flex: 2;
     order: 2;
 }
+
 .box2 {
     flex: 1;
     order: 3;
 }
+
 .box3 {
     flex: 1;
     order: 1;
 }
+
 div h2 {
     animation-duration: 3s;
     animation-name: slidein;
 }
+
 audio+p {
     font-size: 40px;
 }
+
 h3+img {
     width: 80px;
     position: relative;
-    top: -720px;
+    top: -680px;
 }
+
 @keyframes slidein {
     from {
         margin-left: 100%;
@@ -175,17 +210,130 @@ h3+img {
         width: 100%;
     }
 }
+
 .navigationsbox {
     display: inline;
 }
+
 #BlenderArbeiten {
     animation-duration: 3s;
     animation-name: fadein;
 }
+
 @keyframes fadein {
     from {
         opacity: 0%;
     }
     to {
         opacity: 100%;
-    }}
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        font-size: 40px;
+    }
+    .Navi {
+        margin-left: 0px;
+        background-color: black;
+        border-bottom-left-radius: 0px;
+        word-spacing: 40px;
+    }
+    .Navi a {
+        color: white;
+        text-decoration: none;
+    }
+    .Navi a:hover {
+        color: red;
+    }
+    h3+img {
+        width: 80px;
+        position: relative;
+        top: -1670px;
+    }
+    tr>th {
+        opacity: 0;
+    }
+    tr>td {
+        display: block;
+        margin-left: 100%;
+    }
+    .Bilder {
+        opacity: 1;
+        transform: scale(0.5);
+    }
+    .Bilder:hover {
+        transform: scale(1.5);
+        opacity: 1;
+        transition: all 0.5s cubic-bezier(.17, .67, .83, .67) 0s;
+        border: 5px solid black;
+        padding: 5px;
+    }
+    div~p {
+        font-size: 48px;
+    }
+    .container {
+        display: flex;
+        padding: 50px;
+        flex-direction: column;
+    }
+    .box1 {
+        color: red;
+        flex: 4;
+        display: block;
+        order: 1;
+    }
+    .box2 {
+        flex: 1;
+        order: 2;
+    }
+    .box3 {
+        flex: 1;
+        order: 3;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 1024px) {
+    body {
+        font-size: 30px;
+    }
+    .boxschrift {
+        height: 500px;
+    }
+    .Navi {
+        margin-left: 400px;
+    }
+    h1 {
+        padding-top: 0px;
+        position: relative;
+        top: 150px;
+        margin-top: 20px;
+    }
+    h3+img {
+        width: 80px;
+        position: relative;
+        top: -980px;
+    }
+
+    .video{width: 1024px;}
+
+    .container {
+        display: flex;
+        padding: 50px;
+        flex-direction: column;
+    }
+    .box1 {
+        color: red;
+        flex: 4;
+        display: block;
+        order: 1;
+    }
+    .box2 {
+        flex: 1;
+        order: 2;
+    }
+    .box3 {
+        flex: 1;
+        order: 3;
+    }
+}
